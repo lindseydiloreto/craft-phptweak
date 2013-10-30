@@ -1,0 +1,43 @@
+{% import "_includes/forms" as forms %}
+
+{% set phpSettingsReference = 'http://www.php.net/manual/en/ini.list.php' %}
+
+<h2>Override PHP Settings</h2>
+
+{% set enableFrontEndMessage = "On all front-end pages of the <strong>"~siteName~"</strong> website."|t %}
+{% set enableBackEndMessage  = "On the <strong>Craft</strong> back-end Control Panel."|t %}
+
+<p>
+	{{ forms.checkbox({
+		label: enableFrontEndMessage,
+		id: 'enableFrontEnd',
+		name: 'enableFrontEnd',
+		checked: settings.enableFrontEnd,
+		errors: settings.getErrors('enableFrontEnd')
+	}) }}
+</p>
+<p>
+	{{ forms.checkbox({
+		label: enableBackEndMessage,
+		id: 'enableBackEnd',
+		name: 'enableBackEnd',
+		checked: settings.enableBackEnd,
+		errors: settings.getErrors('enableBackEnd')
+	}) }}
+</p>
+
+{{ phpSettingsTable }}
+
+<p>Need help? Check out the <a href="{{ phpSettingsReference }}" target="_blank">official PHP settings documentation</a>.</p>
+
+<hr />
+
+<p>When enabled, a tab will appear at the top of the control panel. This gives you easy access to the documentation.</p>
+
+{{ forms.checkbox({
+	label: "<strong>Enable documentation tab?</strong>"|t,
+	id: 'showDocs',
+	name: 'showDocs',
+	checked: settings.showDocs,
+	errors: settings.getErrors('showDocs')
+}) }}
