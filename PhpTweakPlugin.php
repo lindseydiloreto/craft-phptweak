@@ -16,7 +16,7 @@ class PhpTweakPlugin extends BasePlugin
 
 	function getVersion()
 	{
-		return '0.9.3';
+		return '0.9.4';
 	}
 
 	function getDeveloper()
@@ -62,7 +62,7 @@ class PhpTweakPlugin extends BasePlugin
 				'id'           => 'phpSettings',
 				'name'         => 'phpSettings',
 				//'jsId'         => 'settings-phpSettings',
-				'jsName'       => 'settings[phpSettings]',
+				//'jsName'       => 'settings[phpSettings]', // OBSOLETE (per v1.3)
 				'addRowLabel'  => Craft::t('Add an option'),
 				'cols'         => array(
 					'setting' => array(

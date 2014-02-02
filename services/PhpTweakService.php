@@ -112,6 +112,7 @@ class PhpTweakService extends BaseApplicationComponent
 		return $options;
 	}
 
+	// @TODO: Make this work
 	// Checks to ensure setting is valid
 	private function _validSetting($setting)
 	{
