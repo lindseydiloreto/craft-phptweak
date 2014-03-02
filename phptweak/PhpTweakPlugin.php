@@ -26,7 +26,8 @@ class PhpTweakPlugin extends BasePlugin
 
 	function getDeveloperUrl()
 	{
-		return 'http://doublesecretagency.com';
+		return 'https://github.com/lindseydiloreto/craft-phptweak';
+		//return 'http://doublesecretagency.com';
 	}
 
     public function hasCpSection()
