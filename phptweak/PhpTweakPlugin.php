@@ -6,39 +6,49 @@ class PhpTweakPlugin extends BasePlugin
 
 	public function init()
 	{
+		parent::init();
 		craft()->phpTweak->initialize($this->getSettings());
 	}
 
-	function getName()
+	public function getName()
 	{
 		return Craft::t('PHP Tweak');
 	}
 
-	function getVersion()
+	public function getDescription()
 	{
-		return '0.9.4';
+		return 'Override PHP settings from the control panel.';
 	}
 
-	function getDeveloper()
+	public function getDocumentationUrl()
+	{
+		return 'https://github.com/lindseydiloreto/craft-phptweak';
+	}
+
+	public function getVersion()
+	{
+		return '1.0.0';
+	}
+
+	public function getSchemaVersion()
+	{
+		return '1.0.0';
+	}
+
+	public function getDeveloper()
 	{
 		return 'Double Secret Agency';
 	}
 
-	function getDeveloperUrl()
+	public function getDeveloperUrl()
 	{
 		return 'https://github.com/lindseydiloreto/craft-phptweak';
 		//return 'http://doublesecretagency.com';
 	}
 
-    public function hasCpSection()
-    {
-        return $this->getSettings()->showDocs;
-    }
-
 	protected function defineSettings()
 	{
 		return array(
-			'showDocs'       => array(AttributeType::Bool,  'label' => 'Enable documentation?', 'default' => true),
 			'enableFrontEnd' => array(AttributeType::Bool,  'label' => 'Enable on front-end?',  'default' => true),
 			'enableBackEnd'  => array(AttributeType::Bool,  'label' => 'Enable on back-end?',   'default' => false),
 			'phpSettings'    => array(AttributeType::Mixed, 'label' => 'PHP Settings',          'default' => array()),
@@ -59,19 +69,15 @@ class PhpTweakPlugin extends BasePlugin
 		$phpSettingsTable = craft()->templates->renderMacro('_includes/forms', 'editableTableField', array(
 			array(
 				'label'        => Craft::t('Which PHP settings would you like to override?'),
-				'instructions' => Craft::t('Only settings which can be overridden at a script level (PHP_INI_ALL) will be available here.'),
+				'instructions' => Craft::t('Only settings which can be overridden at a script level (PHP\_INI\_ALL) will be available here.'),
 				'id'           => 'phpSettings',
 				'name'         => 'phpSettings',
-				//'jsId'         => 'settings-phpSettings',
-				//'jsName'       => 'settings[phpSettings]', // OBSOLETE (per v1.3)
-				'addRowLabel'  => Craft::t('Add an option'),
 				'cols'         => array(
 					'setting' => array(
 						'heading' => Craft::t('PHP Setting'),
 						'class'   => 'thin',
 						'type'    => 'select',
 						'options' => craft()->phpTweak->settingsSelectMenu(),
-						//'autopopulate' => 'value'
 					),
 					'value' => array(
 						'heading' => Craft::t('Override Value'),
@@ -91,8 +97,8 @@ class PhpTweakPlugin extends BasePlugin
 
 		return craft()->templates->render('phptweak/_settings', array(
 			'settings'         => $this->getSettings(),
-			'phpSettingsTable' => $phpSettingsTable,
+			'phpSettingsTable' => TemplateHelper::getRaw($phpSettingsTable),
 		));
 	}
-	
+
 }

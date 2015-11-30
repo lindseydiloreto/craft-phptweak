@@ -4,14 +4,6 @@ namespace Craft;
 class PhpTweakService extends BaseApplicationComponent
 {
 
-	function __construct()
-	{
-		$plugin = craft()->plugins->getPlugin('phptweak');
-		if (!$plugin) {
-			throw new Exception('Couldn’t find the PhpTweak plugin!');
-		}
-	}
-
 	// Initialize plugin
 	public function initialize($settings)
 	{
@@ -43,12 +35,6 @@ class PhpTweakService extends BaseApplicationComponent
 			$endEnabled = $settings->enableFrontEnd;
 		}
 
-		// Always show override values on "Current PHP Settings" page
-		if ("/$admin/phptweak/current-settings" == $currentUrl) {
-			$bypass = false;
-			$endEnabled = true;
-		}
-
 		// Bypass if instructed
 		if ($bypass) {return;}
 
@@ -61,6 +47,21 @@ class PhpTweakService extends BaseApplicationComponent
 	        }
     	}
 	}
+
+	// Get list of settings for dropdown menu
+	public function settingsSelectMenu() {
+		// Start with blank option
+		$options = array('' => '');
+		foreach ($this->getAllDetails() as $setting => $details) {
+			// If setting is changeable at the script level
+			if (7 == $details['permissions']) {
+				$options[$setting] = $setting;
+			}
+		}
+		return $options;
+	}
+
+	// ================================================================= //
 
 	// Get specified setting
 	public function get($setting)
@@ -99,18 +100,7 @@ class PhpTweakService extends BaseApplicationComponent
 		return $all;
 	}
 
-	// Get list of settings for dropdown menu
-	public function settingsSelectMenu() {
-		// Start with blank option
-		$options = array('' => '');
-		foreach ($this->getAllDetails() as $setting => $details) {
-			// If setting is changeable at the script level
-			if (7 == $details['permissions']) {
-				$options[$setting] = $setting;
-			}
-		}
-		return $options;
-	}
+	// ================================================================= //
 
 	// @TODO: Make this work
 	// Checks to ensure setting is valid
