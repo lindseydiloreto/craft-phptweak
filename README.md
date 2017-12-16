@@ -3,6 +3,18 @@ PHP Tweak plugin for Craft CMS
 
 _Override PHP settings from the control panel._
 
+***
+
+> ### DISCONTINUED
+>
+>**This plugin will not be ported to Craft 3.**
+>
+>Based on low popularity, it did not make the cut. Sorry!
+>
+>_This repo will be deleted once Craft 4 is released._
+
+***
+
 The main purpose of this plugin is to provide an easy way to override PHP settings from the Craft control panel. These overrides can be applied to the **front-end** and/or **back-end**.
 
 It's a great solution for quickly troubleshooting or problem solving...
