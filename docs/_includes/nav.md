@@ -1,6 +1,6 @@
-[**Overview**]() &nbsp;&bull;&nbsp;
-[**Installation**](installation)
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-[**Variables**](variables) &nbsp;&bull;&nbsp;
-[**Controllers**](controllers) &nbsp;&bull;&nbsp;
-[**Services**](services)
+[**Overview**](http://lindseydiloreto.github.io/craft-phptweak/) &nbsp;&bull;&nbsp;
+[**Installation**](http://lindseydiloreto.github.io/craft-phptweak/installation)
+&nbsp;&nbsp;&nbsp;||&nbsp;&nbsp;&nbsp;
+[**Variables**](http://lindseydiloreto.github.io/craft-phptweak/variables) &nbsp;&bull;&nbsp;
+[**Controllers**](http://lindseydiloreto.github.io/craft-phptweak/controllers) &nbsp;&bull;&nbsp;
+[**Services**](http://lindseydiloreto.github.io/craft-phptweak/services)
