@@ -1,3 +1,5 @@
+{% include header.md %}
+
 {% raw %}
 The absolute simplest part of the module puzzle is the variable file. It allows you to quickly and easily render a value from PHP into a Twig template. The implementation can be as complex as you need or want it to be, but ultimately it's just a very simple tool for outputting a value to Twig.
 

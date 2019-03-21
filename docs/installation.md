@@ -1,3 +1,5 @@
+{% include header.md %}
+
 Installing a module in Craft 3 is a little more complex than installing a plugin in Craft 2. You can't simply add the folder in the right place and move on, there is a small amount of additional configuration required.
 
 ## Step 1: Add the files
