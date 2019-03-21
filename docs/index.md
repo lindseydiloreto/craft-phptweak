@@ -1,4 +1,4 @@
-{% include 'header' %}
+{% include header %}
 
 Craft 3 introduced the concept of a **module**, which didn't previously exist in Craft 2. Back then, custom business logic was simply packaged into a unique plugin, and tossed into the `/plugins` directory alongside all of your other plugins.
 
