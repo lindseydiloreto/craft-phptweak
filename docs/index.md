@@ -1,3 +1,5 @@
+{% include 'header' %}
+
 Craft 3 introduced the concept of a **module**, which didn't previously exist in Craft 2. Back then, custom business logic was simply packaged into a unique plugin, and tossed into the `/plugins` directory alongside all of your other plugins.
 
 But now, the branches have diverged. In Craft 3, a plugin is (almost always) something that was downloaded via the Plugin Store. Plugins are broadly purposed, to accommodate the needs of many sites instead of just one. Gone are the days of adding a custom plugin alongside your other downloaded plugins.
