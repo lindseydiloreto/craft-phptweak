@@ -1,1 +1,7 @@
-[Home]() &bull; [Installation](installation) &bull; [Variables](variables)
+[**Overview**]() &bull;
+[**Installation**](installation) &bull;
+[**Variables**](variables) &bull;
+[**Controllers**](controllers) &bull;
+[**Services**](services)
+
+---
