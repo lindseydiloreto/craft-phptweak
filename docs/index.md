@@ -23,3 +23,5 @@ Instead, you'll want to install a module to accommodate your site's custom busin
 ![](https://raw.githubusercontent.com/doublesecretagency/craft-businesslogic/craft-3/src/resources/img/diagram.png)
 
 It's worth noting that the architecture of this Business Logic Module is designed to _exactly_ match the standard architecture of a plugin. You could theoretically use this module template to develop a plugin, just as easily as you can with a module.
+
+{% include footer.md %}

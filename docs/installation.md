@@ -103,3 +103,5 @@ This change should take place immediately. Other than refreshing your browser, n
 Assuming everything has gone according to plan, take a look at the rest of this Wiki for more information on using your new module. And if things _didn't_ go according to plan, hop over to the [Craft Discord](https://craftcms.com/discord) channel and start asking questions!
 
 **Happy coding!** 🍺
+
+{% include footer.md %}

@@ -33,3 +33,5 @@ You can use service method methods for whatever you like, but these are some of 
 ---
 
 It's impossible to cover every scenario for service methods. Within the context of PHP, the possibilities are endless! 
+
+{% include footer.md %}
