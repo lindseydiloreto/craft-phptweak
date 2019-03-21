@@ -18,10 +18,6 @@ Instead, you'll want to install a module to accommodate your site's custom busin
 - **It's harder to share with other projects.** Not impossible, but harder. However, that's usually a non-issue for custom business logic, where the functionality is geared _specifically_ to the needs of just one particular site.
 - **There's no native "Settings" page or CP section.** Most modules won't need these things anyway. And if you do, creating your own CP section or "Settings" page isn't too bad.
 
-# The Anatomy of a Module
-
-![](https://raw.githubusercontent.com/doublesecretagency/craft-businesslogic/craft-3/src/resources/img/diagram.png)
-
 It's worth noting that the architecture of this Business Logic Module is designed to _exactly_ match the standard architecture of a plugin. You could theoretically use this module template to develop a plugin, just as easily as you can with a module.
 
 {% include footer.md %}
