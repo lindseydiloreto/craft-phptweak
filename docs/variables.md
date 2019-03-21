@@ -1,3 +1,4 @@
+{% raw %}
 The absolute simplest part of the module puzzle is the variable file. It allows you to quickly and easily render a value from PHP into a Twig template. The implementation can be as complex as you need or want it to be, but ultimately it's just a very simple tool for outputting a value to Twig.
 
 Before you dive too deep, it's worth noting that many variable methods (especially the more complex ones) are simply wrappers for a related service method...
@@ -76,3 +77,4 @@ public function authorEntries($userId)
 ---
 
 How you use the variable is completely up to you. Remember, if the logic gets too complex, offload it to a service method!
+{% endraw %}
