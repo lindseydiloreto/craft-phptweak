@@ -1,5 +1,7 @@
 {% include header.md %}
 
+# Services
+
 Your service methods are a blank slate. What they do, and how they do it, are 100% up to you. While this component is the easiest to describe, it is ultimately the most open and flexible piece of the module puzzle.
 
 ```php

@@ -1,5 +1,7 @@
 {% include header.md %}
 
+# Controllers
+
 The job of a controller is to listen for a request from the front-end, take the appropriate action, and return (or redirect) with its response. It serves as a reactionary mechanism for front-end calls.
 
 Controllers are full of `actions`, which are the methods that specifically handle requests. A method _must_ begin with the prefix "action" in order to handle a request from the front-end.
