@@ -1,4 +1,4 @@
-{% include header.md %}
+{% include header.html %}
 
 # Installation
 
@@ -104,4 +104,4 @@ Assuming everything has gone according to plan, take a look at the rest of this 
 
 **Happy coding!** 🍺
 
-{% include footer.md %}
+{% include footer.html %}

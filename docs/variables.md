@@ -1,4 +1,4 @@
-{% include header.md %}
+{% include header.html %}
 
 {% raw %}
 # Variables
@@ -83,4 +83,4 @@ public function authorEntries($userId)
 How you use the variable is completely up to you. Remember, if the logic gets too complex, offload it to a service method!
 {% endraw %}
 
-{% include footer.md %}
+{% include footer.html %}

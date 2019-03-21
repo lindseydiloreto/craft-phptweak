@@ -1,4 +1,4 @@
-{% include header.md %}
+{% include header.html %}
 
 # The Anatomy of a Module
 
@@ -10,4 +10,4 @@ Controllers receive data input from the front-end, whereas variables output data
 
 Models and records (not included in this module template) are more traditional objects, containing data about a specific "thing". Records are designed to read & write rows to the database, whereas models are simply useful containers for passing objects around between components.
 
-{% include footer.md %}
+{% include footer.html %}
