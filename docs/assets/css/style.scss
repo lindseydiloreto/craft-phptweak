@@ -3,6 +3,23 @@
 
 @import "{{ site.theme }}";
 
-body {
-  background-color: #ff0000;
+.page-header {
+  padding: 1rem 2rem;
+  .project-name {
+    display: none;
+  }
+  .project-tagline {
+    margin-top: 1rem;
+    font-size: 3.25rem;
+    opacity: 0.8;
+  }
+}
+
+.site-footer {
+  display: none;
+}
+
+.nav {
+  text-align: center;
+  font-weight: bold;
 }
