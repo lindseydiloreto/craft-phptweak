@@ -1,4 +1,4 @@
-{% include header.html %}
+{% include header.md %}
 
 # Controllers
 
@@ -38,4 +38,4 @@ However, it's possible to circumvent this and allow anonymous users to reach the
 
 As always, you may want to offload some of your logic to service methods if the controller action becomes too complex. Let the controller focus on handling the request, and process the heavy duty logic elsewhere!
 
-{% include footer.html %}
+{% include footer.md %}
